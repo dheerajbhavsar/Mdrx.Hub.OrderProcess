@@ -1,0 +1,51 @@
+﻿<ns0:SalesOrder xmlns:ns0="http://Mdrx.Hub.OrderProcess.SalesOrder_XML">
+  <Header>
+    <OrderId>12345</OrderId>
+    <SalesOrderId>SO_12345</SalesOrderId>
+    <OrderDate>2022-06-14T09:50:22</OrderDate>
+    <OrderTotal>123.45</OrderTotal>
+    <ShippingAddress>
+      <Id>123</Id>
+      <Street1>stree1</Street1>
+      <Street2>stree2</Street2>
+      <City>Pune</City>
+      <State>MH</State>
+      <Pincode>411007</Pincode>
+      <Country>IN</Country>
+    </ShippingAddress>
+    <BillingAddress>
+      <Id>124</Id>
+      <Street1>stree1</Street1>
+      <Street2>stree2</Street2>
+      <City>Mumbai</City>
+      <State>MH</State>
+      <Pincode>400014</Pincode>
+      <Country>IN</Country>
+    </BillingAddress>
+  </Header>
+  <Details>
+    <Lines>
+      <LineItem id="1">
+        <ProductId>PRD1234566</ProductId>
+        <Description>This is red jacket with black buttons</Description>
+        <Quantity>1</Quantity>
+        <UnitPrice>1200</UnitPrice>
+        <UoM>EA</UoM>
+      </LineItem>
+      <LineItem id="2">
+        <ProductId>PRD1234565</ProductId>
+        <Description>This is red jacket with black buttons</Description>
+        <Quantity>1</Quantity>
+        <UnitPrice>1200</UnitPrice>
+        <UoM>EA</UoM>
+      </LineItem>
+      <LineItem id="3">
+        <ProductId>PRD1234567</ProductId>
+        <Description>This is red jacket with black buttons</Description>
+        <Quantity>1</Quantity>
+        <UnitPrice>1200</UnitPrice>
+        <UoM>EA</UoM>
+      </LineItem>
+    </Lines>
+  </Details>
+</ns0:SalesOrder>

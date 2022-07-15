@@ -1,0 +1,40 @@
+﻿<ns0:SalesOrder xmlns:ns0="http://Mdrx.Hub.OrderProcess.SalesOrder_XML">
+  <Header>
+    <OrderId>40a6296b-078f-4999-9439-32fc6d1b63bc</OrderId>
+    <SalesOrderId>SO_40a6296b-078f-4999-9439-32fc6d1b63bc</SalesOrderId>
+    <OrderDate>2022-06-29T00:00:00.0000000</OrderDate>
+    <OrderTotal>188.93</OrderTotal>
+    <ShippingAddress>
+      <Street1>8 Oak Avenue</Street1>
+      <City>Old Town</City>
+      <State>PA</State>
+      <Pincode>95819</Pincode>
+      <Country>US</Country>
+    </ShippingAddress>
+    <BillingAddress>
+      <Street1>123 Maple Street</Street1>
+      <City>Mill Valley</City>
+      <State>CA</State>
+      <Pincode>90952</Pincode>
+      <Country>US</Country>
+    </BillingAddress>
+  </Header>
+  <Details>
+    <Lines>
+      <LineItem id="1">
+        <ProductId>872-AA</ProductId>
+        <Description>Lawnmower</Description>
+        <Quantity>1</Quantity>
+        <UnitPrice>148.95</UnitPrice>
+        <UoM>EA</UoM>
+      </LineItem>
+      <LineItem id="2">
+        <ProductId>926-AA</ProductId>
+        <Description>Baby Monitor</Description>
+        <Quantity>1</Quantity>
+        <UnitPrice>39.98</UnitPrice>
+        <UoM>EA</UoM>
+      </LineItem>
+    </Lines>
+  </Details>
+</ns0:SalesOrder>

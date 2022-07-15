@@ -1,0 +1,8 @@
+<ns0:OrderAck xmlns:ns0="http://Mdrx.Hub.OrderProcess.OrderAck_XML">
+  <AckId>ACK_12345</AckId>
+  <AckDate>2022-07-14T10:40:43</AckDate>
+  <OrderId>12345</OrderId>
+  <OrderDate>2022-06-14T09:50:22</OrderDate>
+  <OrderTotal>499</OrderTotal>
+  <Status>NA</Status>
+</ns0:OrderAck>

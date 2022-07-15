@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67E05DCE-2808-4FAA-9302-5E790ABE4E56}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>Mdrx.Hub.OrderProcess</RootNamespace>
+    <AssemblyName>Mdrx.Hub.OrderProcess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Mdrx.Hub.OrderProcess.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PurchaseOrder_XML.xsd">
+      <TypeName>PurchaseOrder_XML</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="OrderAck_XML.xsd">
+      <TypeName>OrderAck_XML</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="SalesOrder_XML.xsd">
+      <TypeName>SalesOrder</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="PurchaseOrder_To_OrderAck.btm">
+      <TypeName>PurchaseOrder_To_OrderAck</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="PurchaseOrder_To_SalesOrder.btm">
+      <TypeName>PurchaseOrder_To_SalesOrder</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="OrderApprovalProcess.odx">
+      <TypeName>OrderApprovalProcess</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PurchaseOrderEnvelope_XML.xsd">
+      <TypeName>PurchaseOrderEnvelope_XML</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mdrx.Hub.OrderProcess.snk" />
+    <Schema Include="PurchaseOrder_JSON.xsd">
+      <TypeName>PurchaseOrder_JSON</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PurchaseOrder_FF.xsd">
+      <TypeName>PurchaseOrder_FF</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="PurchaseOrderFF_To_PurchaseOrderXML.btm">
+      <TypeName>PurchaseOrderFF_To_PurchaseOrderXML</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="RcvPurchaseOrderFF.btp">
+      <TypeName>RcvPurchaseOrderFF</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mdrx.Hub.Common\Mdrx.Hub.Common.csproj">
+      <Project>{d5dd6ce7-425a-4595-9f46-8548688ada64}</Project>
+      <Name>Mdrx.Hub.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="PurchaseOrderXML_To_PurchaseOrderJSON.btm">
+      <TypeName>PurchaseOrderXML_To_PurchaseOrderJSON</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="RcvPurchaseOrderJSON.btp">
+      <TypeName>RcvPurchaseOrderJSON</TypeName>
+      <Namespace>Mdrx.Hub.OrderProcess</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

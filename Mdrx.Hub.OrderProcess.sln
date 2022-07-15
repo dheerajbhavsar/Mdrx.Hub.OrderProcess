@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mdrx.Hub.OrderProcess", "Mdrx.Hub.OrderProcess\Mdrx.Hub.OrderProcess.btproj", "{67E05DCE-2808-4FAA-9302-5E790ABE4E56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mdrx.Hub.Common", "Mdrx.Hub.Common\Mdrx.Hub.Common.csproj", "{D5DD6CE7-425A-4595-9F46-8548688ADA64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{CD49C0EE-FC17-424D-8B44-9E6C4E98201E}"
+	ProjectSection(SolutionItems) = preProject
+		Mdrx.Hub.OrderProcess.Deployment\Deployment.btdfproj = Mdrx.Hub.OrderProcess.Deployment\Deployment.btdfproj
+		Mdrx.Hub.OrderProcess.Deployment\InstallWizard.xml = Mdrx.Hub.OrderProcess.Deployment\InstallWizard.xml
+		Mdrx.Hub.OrderProcess.Deployment\License.rtf = Mdrx.Hub.OrderProcess.Deployment\License.rtf
+		Mdrx.Hub.OrderProcess.Deployment\PortBindingsMaster.xml = Mdrx.Hub.OrderProcess.Deployment\PortBindingsMaster.xml
+		Mdrx.Hub.OrderProcess.Deployment\SettingsFileGenerator.xml = Mdrx.Hub.OrderProcess.Deployment\SettingsFileGenerator.xml
+		Mdrx.Hub.OrderProcess.Deployment\UnInstallWizard.xml = Mdrx.Hub.OrderProcess.Deployment\UnInstallWizard.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mdrx.Hub.OrderProcess.Maps", "Mdrx.Hub.OrderProcess.Maps\Mdrx.Hub.OrderProcess.Maps.btproj", "{4D404CD9-E4D9-4EDD-87E2-E0CAA5A8D2C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mdrx.Hub.OrderProcess.Pipelines", "Mdrx.Hub.OrderProcess.Pipelines\Mdrx.Hub.OrderProcess.Pipelines.btproj", "{3BBFC873-36AA-4BBF-880D-F751FAD1BD27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mdrx.Hub.OrderProcess.Orchestrations", "Mdrx.Hub.OrderProcess.Orchestrations\Mdrx.Hub.OrderProcess.Orchestrations.btproj", "{E624DA42-C036-4E41-8C81-1F85334EEADD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BRE", "BRE", "{72B0A5AE-6B09-4B85-85ED-3257F09FD59B}"
+	ProjectSection(SolutionItems) = preProject
+		Mdrx.Hub.OrderProcess.Deployment\OrderProcessPolicy_v1.3.xml = Mdrx.Hub.OrderProcess.Deployment\OrderProcessPolicy_v1.3.xml
+		Mdrx.Hub.OrderProcess.Deployment\OrderProcessVoc_v1.0.xml = Mdrx.Hub.OrderProcess.Deployment\OrderProcessVoc_v1.0.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67E05DCE-2808-4FAA-9302-5E790ABE4E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E05DCE-2808-4FAA-9302-5E790ABE4E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E05DCE-2808-4FAA-9302-5E790ABE4E56}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{67E05DCE-2808-4FAA-9302-5E790ABE4E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E05DCE-2808-4FAA-9302-5E790ABE4E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67E05DCE-2808-4FAA-9302-5E790ABE4E56}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D5DD6CE7-425A-4595-9F46-8548688ADA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5DD6CE7-425A-4595-9F46-8548688ADA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5DD6CE7-425A-4595-9F46-8548688ADA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5DD6CE7-425A-4595-9F46-8548688ADA64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D404CD9-E4D9-4EDD-87E2-E0CAA5A8D2C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D404CD9-E4D9-4EDD-87E2-E0CAA5A8D2C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D404CD9-E4D9-4EDD-87E2-E0CAA5A8D2C0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4D404CD9-E4D9-4EDD-87E2-E0CAA5A8D2C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D404CD9-E4D9-4EDD-87E2-E0CAA5A8D2C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D404CD9-E4D9-4EDD-87E2-E0CAA5A8D2C0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3BBFC873-36AA-4BBF-880D-F751FAD1BD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBFC873-36AA-4BBF-880D-F751FAD1BD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBFC873-36AA-4BBF-880D-F751FAD1BD27}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3BBFC873-36AA-4BBF-880D-F751FAD1BD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBFC873-36AA-4BBF-880D-F751FAD1BD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBFC873-36AA-4BBF-880D-F751FAD1BD27}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E624DA42-C036-4E41-8C81-1F85334EEADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E624DA42-C036-4E41-8C81-1F85334EEADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E624DA42-C036-4E41-8C81-1F85334EEADD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E624DA42-C036-4E41-8C81-1F85334EEADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E624DA42-C036-4E41-8C81-1F85334EEADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E624DA42-C036-4E41-8C81-1F85334EEADD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DF492A5-F1C0-449E-921C-D926A2873DC1}
+	EndGlobalSection
+EndGlobal

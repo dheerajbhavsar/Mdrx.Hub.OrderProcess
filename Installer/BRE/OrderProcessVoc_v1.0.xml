@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<brl xmlns="http://schemas.microsoft.com/businessruleslanguage/2002">
+  <vocabulary id="4bbb2d1b-99dc-412c-8209-f41143cd39d3" name="OrderProcessVoc" uri="" description="">
+    <version major="1" minor="0" description="" modifiedby="VMBTSDEV01\Administrator" date="2022-07-14T09:51:27.7017367+05:30" />
+    <vocabularydefinition id="61ed34b4-4e8f-4616-8084-b396b268775a" name="STATUS" description="">
+      <setdefinition type="string">
+        <element>
+          <valuedefinitionliteral type="string">
+            <string>ACCEPTED</string>
+          </valuedefinitionliteral>
+        </element>
+        <element>
+          <valuedefinitionliteral type="string">
+            <string>DECLINED</string>
+          </valuedefinitionliteral>
+        </element>
+      </setdefinition>
+      <formatstring language="en-US" string="STATUS" />
+    </vocabularydefinition>
+    <vocabularydefinition id="7ec2e564-b932-41fc-9a2e-438c1c1dc307" name="OrderStatus" description="">
+      <bindingdefinition>
+        <documentelementbindingdefinition field="*[local-name()='Status' and namespace-uri()='']" fieldalias="Status" type="string">
+          <documentinfo schema="C:\repos\Mdrx.Hub.OrderProcess\Mdrx.Hub.OrderProcess\OrderAck_XML.xsd" documenttype="Mdrx.Hub.OrderProcess.OrderAck_XML" selector="/*[local-name()='OrderAck' and namespace-uri()='http://Mdrx.Hub.OrderProcess.OrderAck_XML']" selectoralias="/*[local-name()='OrderAck' and namespace-uri()='http://Mdrx.Hub.OrderProcess.OrderAck_XML']" instance="0" />
+          <argument position="0">
+            <valuedefinitionliteral type="string">
+              <string />
+            </valuedefinitionliteral>
+          </argument>
+        </documentelementbindingdefinition>
+      </bindingdefinition>
+      <formatstring language="en-US" string="SetOrderStatusTo {0}" delimiter="{[0-9]+}">
+        <argument position="0">
+          <valuedefinitionliteral type="string">
+            <string />
+          </valuedefinitionliteral>
+        </argument>
+      </formatstring>
+    </vocabularydefinition>
+    <vocabularydefinition id="0e3d3674-c488-47fa-84c7-e9493567e5cb" name="OrderTotal" description="">
+      <bindingdefinition>
+        <documentelementbindingdefinition field="*[local-name()='OrderTotal' and namespace-uri()='']" fieldalias="OrderTotal" type="float">
+          <documentinfo schema="C:\repos\Mdrx.Hub.OrderProcess\Mdrx.Hub.OrderProcess\OrderAck_XML.xsd" documenttype="Mdrx.Hub.OrderProcess.OrderAck_XML" selector="/*[local-name()='OrderAck' and namespace-uri()='http://Mdrx.Hub.OrderProcess.OrderAck_XML']" selectoralias="/*[local-name()='OrderAck' and namespace-uri()='http://Mdrx.Hub.OrderProcess.OrderAck_XML']" instance="0" />
+        </documentelementbindingdefinition>
+      </bindingdefinition>
+      <formatstring language="en-US" string="OrderTotal" />
+    </vocabularydefinition>
+  </vocabulary>
+</brl>

@@ -1,0 +1,62 @@
+{
+	"PurchaseOrder": {
+		"Header": {
+			"OrderId": "12345",
+			"OrderDate": "2022-06-14T09:50:22",
+			"OrderTotal": 7000,
+			"Address": [
+				{
+					"Id": 123,
+					"Street1": "stree1",
+					"Street2": "stree2",
+					"City": "Pune",
+					"State": "MH",
+					"Pincode": "411007",
+					"Country": "IN",
+					"type": "shipping"
+				},
+				{
+					"Id": 124,
+					"Street1": "stree1",
+					"Street2": "stree2",
+					"City": "Mumbai",
+					"State": "MH",
+					"Pincode": "400014",
+					"Country": "IN",
+					"type": "billing"
+				}
+			]
+		},
+		"Details": {
+			"LineItems": {
+				"LineItem": [
+					{
+						"LineNumber": 1,
+						"ProductId": "PRD1234566",
+						"Description": "This is red jacket with black buttons",
+						"Quantity": 1,
+						"UnitPrice": 1200,
+						"UoM": "EA"
+					},
+					{
+						"LineNumber": 2,
+						"ProductId": "PRD1234565",
+						"Description": "This is red jacket with black buttons",
+						"Quantity": 1,
+						"UnitPrice": 1200,
+						"UoM": "EA"
+					},
+					{
+						"LineNumber": 3,
+						"ProductId": "PRD1234567",
+						"Description": "This is red jacket with black buttons",
+						"Quantity": 1,
+						"UnitPrice": 1200,
+						"UoM": "EA"
+					}
+				]
+			}
+		}
+	}
+}
+

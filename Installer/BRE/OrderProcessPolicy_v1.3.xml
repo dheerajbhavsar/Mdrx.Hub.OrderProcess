@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<brl xmlns="http://schemas.microsoft.com/businessruleslanguage/2002">
+  <ruleset name="OrderProcessPolicy">
+    <version major="1" minor="4" description="" modifiedby="VMBTSDEV01\Administrator" date="2022-07-14T10:04:52.3522966+05:30" />
+    <version major="1" minor="3" description="" modifiedby="VMBTSDEV01\Administrator" date="2022-07-14T10:05:09.1337989+05:30" />
+    <configuration />
+    <bindings>
+      <xmldocument ref="xml_31" doctype="Mdrx.Hub.OrderProcess.OrderAck_XML" instances="16" selectivity="1" instance="0">
+        <selector>/*[local-name()='OrderAck' and namespace-uri()='http://Mdrx.Hub.OrderProcess.OrderAck_XML']</selector>
+        <schema>C:\repos\Mdrx.Hub.OrderProcess\Mdrx.Hub.OrderProcess\OrderAck_XML.xsd</schema>
+      </xmldocument>
+    </bindings>
+    <rule name="OrderAccepted" priority="0" active="true">
+      <if>
+        <compare operator="less than">
+          <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="1c177bf4-a970-4669-a768-a74d33af190d" />
+          <lhs>
+            <function>
+              <vocabularylink uri="4bbb2d1b-99dc-412c-8209-f41143cd39d3" element="0e3d3674-c488-47fa-84c7-e9493567e5cb" />
+              <xmldocumentmember xmldocumentref="xml_31" type="float" sideeffects="false">
+                <field>*[local-name()='OrderTotal' and namespace-uri()='']</field>
+                <fieldalias>OrderTotal</fieldalias>
+              </xmldocumentmember>
+            </function>
+          </lhs>
+          <rhs>
+            <constant>
+              <float>5000</float>
+            </constant>
+          </rhs>
+        </compare>
+      </if>
+      <then>
+        <function>
+          <vocabularylink uri="4bbb2d1b-99dc-412c-8209-f41143cd39d3" element="7ec2e564-b932-41fc-9a2e-438c1c1dc307" />
+          <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="true">
+            <field>*[local-name()='Status' and namespace-uri()='']</field>
+            <fieldalias>Status</fieldalias>
+            <argument>
+              <constant>
+                <vocabularylink uri="4bbb2d1b-99dc-412c-8209-f41143cd39d3" element="61ed34b4-4e8f-4616-8084-b396b268775a" />
+                <string>ACCEPTED</string>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="OrderDeclined" priority="0" active="true">
+      <if>
+        <compare operator="greater than or equal to">
+          <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="4ac045f2-f5ad-42cf-8e20-76d3f7f683f1" />
+          <lhs>
+            <function>
+              <vocabularylink uri="4bbb2d1b-99dc-412c-8209-f41143cd39d3" element="0e3d3674-c488-47fa-84c7-e9493567e5cb" />
+              <xmldocumentmember xmldocumentref="xml_31" type="float" sideeffects="false">
+                <field>*[local-name()='OrderTotal' and namespace-uri()='']</field>
+                <fieldalias>OrderTotal</fieldalias>
+              </xmldocumentmember>
+            </function>
+          </lhs>
+          <rhs>
+            <constant>
+              <float>5000</float>
+            </constant>
+          </rhs>
+        </compare>
+      </if>
+      <then>
+        <function>
+          <vocabularylink uri="4bbb2d1b-99dc-412c-8209-f41143cd39d3" element="7ec2e564-b932-41fc-9a2e-438c1c1dc307" />
+          <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="true">
+            <field>*[local-name()='Status' and namespace-uri()='']</field>
+            <fieldalias>Status</fieldalias>
+            <argument>
+              <constant>
+                <vocabularylink uri="4bbb2d1b-99dc-412c-8209-f41143cd39d3" element="61ed34b4-4e8f-4616-8084-b396b268775a" />
+                <string>DECLINED</string>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+  </ruleset>
+</brl>
