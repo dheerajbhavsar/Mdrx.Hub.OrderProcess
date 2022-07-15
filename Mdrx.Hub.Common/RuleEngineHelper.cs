@@ -13,5 +13,7 @@ namespace Mdrx.Hub.Common
 
         }
         public static bool IsDeclined(float orderTotal) => orderTotal > 5000;
+
+        public static bool IsValidCustomer(string customerName) => customerName.Contains("VAL");
     }
 }
